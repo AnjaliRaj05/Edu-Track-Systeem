@@ -1,0 +1,85 @@
+{% extends 'hod_template/base_template.html' %}
+
+{% block main_content %}
+
+{% load static %}
+
+<section class="content">
+        <div class="container-fluid">
+          <!-- Small boxes (Stat box) -->
+          <div class="row">
+            <div class="col-lg-3 col-6" >
+              <!-- small box -->
+              <div class="small-box bg-info">
+                <div class="inner" style=" height: 150px;">
+                  <h3>{{ all_student_count }}</h3>
+
+                  <p>Total Students</p>
+                </div>
+                <div class="icon">
+                  <i class="nav-icon fas fa-user-graduate" style="color:black;"></i>
+                </div>
+                <a href="{% url 'manage_student' %}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-6">
+              <!-- small box -->
+              <div class="small-box bg-danger">
+                <div class="inner" style=" height: 150px;">
+                  <h3>{{ staff_count }}</h3>
+
+                  <p>Total Faculty</p>
+                </div>
+                <div class="icon">
+                  <i class="nav-icon fas fa-chalkboard-teacher" style="color:black;"></i>
+
+                </div>
+                <a href="{% url 'manage_staff' %}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+            
+            <div class="col-lg-3 col-6">
+              <!-- small box -->
+              <div class="small-box bg-warning">
+                <div class="inner" style=" height: 150px;">
+                  <h3>{{ course_count }}</h3>
+
+                  <p>Total Courses</p>
+                </div>
+                <div class="icon">
+                  <i class="nav-icon fas fa-book" style="color:black;"></i>
+                </div>
+                <a href="{% url 'manage_course' %}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-6">
+              <!-- small box -->
+              <div class="small-box bg-success">
+                <div class="inner" style=" height: 150px;">
+                  <h3>{{ subject_count }}</h3>
+
+                  <p>Total Subjects</p>
+                </div>
+                <div class="icon">
+                  <i class="nav-icon fas fa-book" style="color:black;"></i>
+                </div>
+                <a href="{% url 'manage_subject' %}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+            
+          </div>
+          <!-- /.row -->
+        </div><!-- /.container-fluid -->
+      </section>
+
+{% endblock main_content %}
+
+{% block custom_js %}
+
+<!-- Removed all chart-related JavaScript code -->
+
+{% endblock custom_js %}
